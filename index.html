@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <title>ISSUE TRACKER JS</title>
+</head>
+
+<body>
+     <div class="container my-5">
+          <div class="d-flex justify-content-end">
+               <button class="btn-signOut">Sign Out</button>
+          </div>
+          <h3 class="title fw-normal fs-2 text-center my-5">INSUE TRACKER</h2>
+               <div id="form">
+                    <div class="form-group my-4">
+                         <label for="title-input">Title</label>
+                         <input type="text" class="form-control my-2" id="title-input" placeholder="Title...">
+                    </div>
+                    <div class="form-group my-4">
+                         <label for="des-input">Description</label>
+                         <input type="text" class="form-control my-2" id="des-input"
+                              placeholder="Describe the issue...">
+                    </div>
+                    <div class="form-group my-4">
+                         <label class="author-input" id="author-input">Author</label>
+                         <select class="form-select my-2" id="select-author">
+                              <option value="sunny">Sunny</option>
+                              <option value="tony">Tony</option>
+                         </select>
+                    </div>
+                    <div class="form-group my-4">
+                         <label class="author-input" id="severity-select">Severity</label>
+                         <select class="form-select my-2" id="select-severity">
+                              <option value="low">Low</option>
+                              <option value="medium">Medium</option>
+                              <option value="hight">Hight</option>
+                         </select>
+                    </div>
+                    <div class="btn-add d-flex justify-content-end">
+                         <button class="btn btn-primary" id="btn-add" >Add</button>
+                    </div>
+                    <hr>
+               </div>
+
+               <table class="table">
+                    <thead>
+                         <tr>
+                              <th scope="col">Title</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Author</th>
+                              <th scope="col">Severity</th>
+                         </tr>
+                    </thead>
+                    <tbody class="tbody">
+                         
+                    </tbody>
+               </table>
+
+               <!-- List issue -->
+               <div class="header-list d-flex justify-content-between my-5">
+                    <h3 class="name-list">
+                         List issue
+                    </h3>
+                    <input type="text" class="form-control w-auto" placeholder="Search by description">
+               </div>
+               <div class="filter-list d-flex align-items-center">
+                    <p class="my-0 me-5">Filter:</p>
+                    <button class="btn btn-primary mx-1 px-4">All</button>
+                    <button class="btn btn-success mx-1">Open</button>
+                    <button class="btn btn-danger mx-1">Close</button>
+               </div>
+               <div class="select-list d-flex my-5 align-items-center">
+                    <p class="my-0 me-4">Order By:</p>
+                    <select class="form-select w-25">
+                         <option value="choose">Choose...</option>
+                         <option value="asc">ASC</option>
+                         <option value="desc">DESC</option>
+                    </select>
+               </div>
+
+               <!-- Add list item --> 
+               <ul class="list-add ps-0">
+               <li class="list-item list-unstyled rounded-1 mb-4">
+                    <div class="list-item-header d-flex align-items-center border-bottom p-2 px-4">
+                         <p class="list-item-title my-0 me-2">Title</p>
+                         <div class="list-item-status px-2 rounded-1 text-white fw-bold">new</div>
+                         <hr>
+                    </div>
+                    <div class="list-item-content p-2 px-4">
+                         <h5 class="fs-4 fw-bold my-4">delectus aut autem</h5>
+                         <div class="list-item-author d-flex justify-content-between align-items-center my-3">
+                              <div class="d-flex">
+                                   <img src="https://i.pravatar.cc/150?img=3" alt="" height="50px" class="rounded-5">
+                                   <img src="https://i.pravatar.cc/150?img=3" alt="" height="50px" class="rounded-5">
+                              </div>
+                              <div class="list-item-button">
+                                   <button type="button" class="btn btn-primary">Close</button>
+                                   <button type="button" class="btn btn-danger">Delete</button>
+                                   
+                              </div>
+                         </div>
+                    </div>
+               </li>
+               <li class="list-item list-unstyled rounded-1">
+                    <div class="list-item-header d-flex align-items-center border-bottom p-2 px-4">
+                         <p class="list-item-title my-0 me-2">Title</p>
+                         <div class="list-item-status px-2 rounded-1 text-white fw-bold">new</div>
+                         <hr>
+                    </div>
+                    <div class="list-item-content p-2 px-4">
+                         <h5 class="fs-4 fw-bold my-4">quis ut nam facilis et officia qui</h5>
+                         <div class="list-item-author d-flex justify-content-between align-items-center my-3">
+                              <div class="d-flex">
+                                   <img src="https://i.pravatar.cc/150?img=3" alt="" height="50px" class="rounded-5">
+                                   <img src="https://i.pravatar.cc/150?img=3" alt="" height="50px" class="rounded-5">
+                              </div>
+                              <div class="list-item-button">
+                                   <button type="button" class="btn btn-primary">Close</button>
+                                   <button type="button" class="btn btn-danger">Delete</button>
+                                   
+                              </div>
+                         </div>
+                    </div>
+               </li>
+          </ul>
+
+
+     </div>
+     <script src="./index.js"></script>
+     <!-- JS Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
